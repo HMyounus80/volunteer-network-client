@@ -1,0 +1,9 @@
+form {
+    border: 1px solid gray;
+    padding: 25px;
+}
+
+form input {
+    border: none;
+    border-bottom: 1px solid gray;
+}
