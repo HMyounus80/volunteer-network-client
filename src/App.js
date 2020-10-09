@@ -11,6 +11,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import RegisterForm from './Components/RegisterForm/RegisterForm';
 import Login from './Components/Login/Login';
 import Events from './Components/Events/Events';
+import Admin from './Components/Admin/Admin';
 
 export const UserContext = createContext()
 
@@ -29,13 +30,23 @@ function App() {
               <Login/>
           </Route>
 
-          <PrivateRoute path="/register">
+          <PrivateRoute path="/register/:taskId">
               <RegisterForm/>
+          </PrivateRoute>
+
+          
+          <PrivateRoute path="/registrationList">
+              <Events/>
+          </PrivateRoute>
+
+
+          <PrivateRoute path="/admin">
+              <Admin/>
           </PrivateRoute>
 
            <Route path="/events">
               <Events/>
-          </Route>
+             </Route>
 
 
           <Route exact path="/">

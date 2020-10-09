@@ -22,7 +22,7 @@ const Header = () => {
                     <Link className="single-nav-link" to="/donation">Donation</Link>
                     <Link className="single-nav-link" to="/events">Events</Link>
                     <Link className="single-nav-link" to="/blog">Blog</Link>
-                    <Link  to="/register"><Button className="mr-3" variant="primary">Register</Button></Link>
+                    <Link  to="/registrationList"><Button className="mr-3" variant="primary">Register</Button></Link>
                     <Link to="/admin"><Button className="mr-3" variant="dark">Admin</Button></Link>
                 </Nav>
             </Navbar.Collapse>

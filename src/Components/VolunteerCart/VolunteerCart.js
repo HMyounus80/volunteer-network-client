@@ -1,17 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import childSupport from '../../images/childSupport.png';
 
-const VolunteerCart = ({task}) => {
+const VolunteerCart = (props) => {
+    
+    const {name, picture, _id} = props.task;
 
     return (
-        <Link to="/register">
-        <div className="col-md-3 mb-4">
-            <img style={{height: '300px'}} src={require(`../../images/${task.pic}`)} alt=""/>
-            <h3 style={{textDecoration: 'none', textAlign: 'center'}}>{task.name}</h3>
+        <Link to={`/register/${_id}`}>
+        
+        <div className="col-md-3">
+        <img style={{height: '300px'}} src={picture} alt=""/>
+        <h4 style={{textDecoration: 'none', textAlign:'center'}}>{name}</h4> 
+      
         </div>
         </Link>
+       
     );
 };
 
 export default VolunteerCart;
+
+ 
+            
+    
